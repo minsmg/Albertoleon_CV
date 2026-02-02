@@ -1,276 +1,233 @@
-//*********************************************************** */
-// Es importante llenar toda la información de la siguiente sección
-//*********************************************************** */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículum de Alberto León</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafc;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+    }
+    header {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #fff;
+    }
+    nav {
+      background-color: #2c3e50;
+      text-align: center;
+      padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #ecf0f1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+    nav a.active {
+      color: #1abc9c;
+      font-weight: 700;
+      border-bottom: 2px solid #1abc9c;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.5s, color 0.5s;
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 0.8rem 0;
+      line-height: 1.6;
+    }
+    .perfil h2 { color: #1abc9c; }
+    .experiencia h2 { color: #3498db; }
+    .educacion h2 { color: #2ecc71; }
+    .habilidades h2 { color: #e67e22; }
+    .proyectos h2 { color: #9b59b6; }
 
-const InformacionPersonal = {
-  Nombre: "Jaime",
-  Apellidos: "Bosch",
-  Cargo: "Desarrollador Full Stack Sr",
-  Genero: "Masculino",
-  WebSite: "https://tumentorweb.com.mx",
-  Nacionalidad: "Mexicana",
-  FechaNacimiento: "Enero de 1990",
-  Edad: "32",
-  EstadoCivil: "Casado",
-  Email: "jaimeboschdev@outlook.com",
-  Telefono: "-----",
-  DescripcionCorta: `Especializado en la creación de proyectos desde la arquitectura, backend y el diseño de las aplicaciones.`,
-  DescripcionProfesional: `Amante de la programación con más de 10 años de experiencia trabajando con proyectos de escritorio, web o móviles. Especializado con C#, XAMARIN, SQL, CSS/HTML/JAVASCRIPT, React, REACT NATIVE, SEO, ANALITYCS, API REST, MongoDB.
-  Me considero una persona innovadora y emprendedora, algunos de mis emprendimientos:
-  
-  "Detalles Cibernéticos",  "Torneos Platino México",  "Tu Mentor Web",  "Hay Paro",  "Tu Encargo App"
+    /* Animación fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  Me gusta aprender día con día algo nuevo. Soy estudiante de Platzi, leer y actualizarme en las nuevas tecnologías es parte de mí para poder innovar cada que se pueda.`,
-  AcercaDeMi: `Jaime Bosch es una persona que siempre está buscando ayudar a la sociedad por medio de la tecnología, me considero una persona emprendedora e innovadora. 
-  
-  Soy proactivo, extrovertido, leal, comunicativo, ordenado, puntual, honesto, responsable y me considero un buen lider. Tengo algunos emprendimientos y mi objetivo es crear un desarrollo que pueda impactar a la sociedad. `,
-};
+    /* Botón flotante volver arriba */
+    #btnTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    #btnTop:hover {
+      background-color: #16a085;
+    }
 
-//*********************************************************** */
-// Deja en blanco la red social que no quieras que se muestre
-//*********************************************************** */
-const RedesSociales = {
-  twitter: "https://twitter.com/Bombosch_7",
-  facebook: "https://www.facebook.com/JaimeBoschDesarrollo/",
-  instagram: "https://www.instagram.com/jaimeboschdev/",
-  linkedin: "https://www.linkedin.com/in/jaime-j-gonzalez-bosch-0810461a0/",
-};
+    /* Botón modo oscuro */
+    #btnDark {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 1000;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    #btnDark:hover {
+      background-color: #1abc9c;
+    }
 
-//*********************************************************** */
-// Deja en blanco la red social que no quieras que se muestre
-//Para agregar o quitar SKILLS solo reá necesario agregar o quitar las siguientes líneas:
-/*
+    /* Estilos modo oscuro */
+    body.dark {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    body.dark section {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    }
+    body.dark nav {
+      background-color: #111;
+    }
+    body.dark nav a {
+      color: #ddd;
+    }
+    body.dark nav a.active {
+      color: #1abc9c;
+      border-bottom: 2px solid #1abc9c;
+    }
+    body.dark footer {
+      background-color: #111;
+      color: #ddd;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    footer p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="tu-foto.jpg" alt="Foto de Alberto León">
+    <h1>Alberto León</h1>
+    <p>Técnico Superior en Producción Industrial | Gestión de Calidad y Seguridad</p>
+    <p>📧 tuemail@correo.com | 🔗 linkedin.com/in/tuusuario | 💻 github.com/minsmg</p>
+  </header>
 
-{
-  Skill: "",
-  Puntaje: 100,
-  Experiencia: " Años",
-},
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#educacion">Educación</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+  </nav>
 
-*/
-//Debes copiar las llaves y la ", (Coma)" del final
-//*********************************************************** */
+  <section id="perfil" class="perfil fade-in">
+    <h2>👤 Perfil Profesional</h2>
+    <p>Técnico Superior en Producción Industrial con más de 30 años de experiencia en procesos industriales,
+    control de calidad y seguridad laboral. Apasionado por la mejora continua, el liderazgo
+    organizacional y la formación multidisciplinaria. Mi objetivo es aportar soluciones
+    innovadoras que optimicen la productividad y garanticen ambientes de trabajo seguros.
+    Me caracterizo por un enfoque ético y humanista, respaldado por mi formación en teología,
+    lo que me permite integrar valores sólidos en la gestión empresarial.</p>
+  </section>
 
-const Skills = [
-  {
-    Skill: "HTML5/Javascript/CSS3",
-    Puntaje: 100,
-    Experiencia: "10 Años",
-  },
-  {
-    Skill: "Window Forms",
-    Puntaje: 100,
-    Experiencia: "8 Años",
-  },
-  {
-    Skill: "C# .NET",
-    Puntaje: 100,
-    Experiencia: "8 Años",
-  },
-  {
-    Skill: "API REST",
-    Puntaje: 100,
-    Experiencia: "7 Años",
-  },
-  {
-    Skill: "Boostrap",
-    Puntaje: 100,
-    Experiencia: "6 Años",
-  },
-  {
-    Skill: "Telerik",
-    Puntaje: 90,
-    Experiencia: "4 Años",
-  },
-  {
-    Skill: "React",
-    Puntaje: 90,
-    Experiencia: "4 Años",
-  },
-  {
-    Skill: "SQL Server",
-    Puntaje: 90,
-    Experiencia: "8 Años",
-  },
-  {
-    Skill: "Window (WCF)",
-    Puntaje: 80,
-    Experiencia: "5 Años",
-  },
-  {
-    Skill: "Xamarin",
-    Puntaje: 80,
-    Experiencia: "5 Años",
-  },
-  {
-    Skill: "Node JS",
-    Puntaje: 80,
-    Experiencia: "2 Años",
-  },
-  {
-    Skill: "React Native",
-    Puntaje: 70,
-    Experiencia: "2 Años",
-  },
+  <section id="experiencia" class="experiencia fade-in">
+    <h2>🧑‍💼 Experiencia</h2>
+    <ul>
+      <li><strong>Supervisor de Calidad – Empresa X (2015–2023)</strong><br>
+        Implementación de ISO 9001, reducción de fallas en procesos en un 20%, optimización de procedimientos de control de calidad.</li>
+      <li><strong>Coordinador de Seguridad – Empresa Y (2000–2015)</strong><br>
+        Programas de seguridad industrial certificados, capacitación de personal en protocolos de seguridad, reducción de incidentes laborales.</li>
+    </ul>
+  </section>
 
-  {
-    Skill: "Mongo DB",
-    Puntaje: 70,
-    Experiencia: "2 Años",
-  },
-  {
-    Skill: "KNIME",
-    Puntaje: 70,
-    Experiencia: "1 Año",
-  },
-];
+  <section id="educacion" class="educacion fade-in">
+    <h2>🎓 Educación y Certificaciones</h2>
+    <ul>
+      <li>Diplomado en Gestión de Calidad ISO 9001 – Politécnico Superior de Colombia (2023)</li>
+      <li>Certificación en Lean Manufacturing</li>
+      <li>Curso de Inglés Intermedio – 2023</li>
+      <li>Licenciatura en Teología – 1990</li>
+    </ul>
+  </section>
 
-//*********************************************************** */
-//  Es importante llenar toda la información de la siguiente sección
-// Para agregar otra sección de "Educación" o cupa el siguiente template
-/*
-  {
-      Escuela: "",
-      Periodo: "",
-      Titulo: "", //Dejar en blanco si no hay titulo o diploma
-      DescripcionCorta:"",
-  },
-*/
-//*********************************************************** */
+  <section id="habilidades" class="habilidades fade-in">
+    <h2>⚙️ Habilidades Técnicas</h2>
+    <ul>
+      <li>Control de Calidad (25 años)</li>
+      <li>Seguridad Industrial (20 años)</li>
+      <li>Excel y herramientas digitales (15 años)</li>
+      <li>PLC, Scada, Instrumentación</li>
+      <li>Inglés intermedio</li>
+    </ul>
+  </section>
 
-const Resumen = {
-  DescripcionCorta: `En esta sección te contare un poco de mi, de mi educación y de mi experiencia laboral`,
-  Mi_Resumen: `Innovador, Alegre y Apasionado por la programación, con más de 13 años de experiencia. Me gusta formar un gran ambiente laboral y en mi caso, aplica el dicho "Trabaja en lo que amas y así, ningun día de tu vida tendrás que trabajar"`,
-  Puntos_A_Destacar: [
-    "Cuento con 5 emprendimeintos",
-    "Deportista de alto renidmiento de joven",
-    "Estudiante de Platzi por más de 2 años",
-  ],
-  Educación: [
-    {
-      Escuela: "ESCUELA DE PLATZI",
-      Periodo: "2019 - 2022",
-      Titulo: "He logrado terminar 5 escuelas completas", //Dejar en blanco si no hay titulo o diploma
-      DescripcionCorta:
-        "Al ser estudiante de platzi ha impulsado mi carrera de una manera increible al aplicar sui lema 'Nunca pares de Aprender'",
-    },
-    {
-      Escuela: "INSTITUTO POLITÉCNICO NACIONAL (IPN)",
-      Periodo: "2008 - 2013",
-      Titulo: "Ing. en Computación", //Dejar en blanco si no hay titulo o diploma
-      DescripcionCorta:
-        "Logre conseguir mi carrera en el IPN, mi segunda casa. Dando el discurso de Graduación de la generación en la que sali.",
-    },
-  ],
-};
-
-//*********************************************************** */
-// EXPERIENCIA PROFESIONAL
-//En caso de querer agregar más experiencia agregue las siguientes líneas:
-/*
-{
-    Cargo: "",
-    Fecha: "",
-    Empresa: "",
-    Funciones: [
-      "",
-      "",
-      "",
-      "",
-    ], //Agregar una funcion encerrada en coma y agregar un coma (,) al final de cada función
-  },
-*/
-
-//*********************************************************** */
-
-const ExperienciaProfesional = [
-  {
-    Cargo: "Supervising Senior FullStack Developer",
-    Fecha: "2021 - Actual",
-    Empresa: "KPMG México",
-    Funciones: [
-      "Project Manager para la automatización de los procesos manuales dentor de la firma",
-      "Creación de Sistemas Web necesarios para la firma",
-      "Creación de API´S necesarias para la firma",
-      "Creación de Aplicaciones Web, Mobile o de escritorio, necesarias para la firma.",
-    ], //Agregar una funcion encerrada en coma y agregar un coma (,) al final de cada función
-  },
-  {
-    Cargo: "Sub-Gerente de Desarrollo",
-    Fecha: "2014-2021",
-    Empresa: "CENTRO CELULAR S.A. de CV.",
-    Funciones: [
-      `Liderar a mi equipo de trabajo para poder desarrollar y dar
-      mantenimiento a los sistemas y módulos de la empresa para mejorar el flujo de trabajo de
-      nuestros usuarios.`,
-      "Crear el modelado y todos los controles técnicos necesarios en base de datos (SQL) para poder lanzar a producción los proyectos asignados.",
-      "Testear el proyecto una vez terminado para minimizar los errores que se pudieran presentar.",
-      "Crear videotutoriales y dar capacitación a los usuarios de los sistemas creados.",
-    ], //Agregar una funcion encerrada en coma y agregar un coma (,) al final de cada función
-  },
-  {
-    Cargo: "Desarrollador WEB",
-    Fecha: "2013-2014",
-    Empresa: "ONISVIDA",
-    Funciones: [
-      "Mantenimiento a la página Web",
-      "Creación App informativa",
-      "Soporte técnico",
-      "Creación de Página para cliente",
-    ], //Agregar una funcion encerrada en coma y agregar un coma (,) al final de cada función
-  },
-];
-
-//*********************************************************** */
-//  SECCIÓN ¿PORQUE DEBES CONTACTARME?
-
-/*
-  {
-      Titulo: "",
-      Link:"", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta:``,
-  },
-     */
-//*********************************************************** */
-
-const PorqueDebesContactarme = {
-  Descripcion: `Sí estas buscando crear un proyecto técnologíco, ya sea una página web, una aplicación mobile, una automatización para tu empresa o simplemente un buen desarrollador para tu empresa,
-   yo soy el indicado. Soy un apasionado por la programación, el diseño y la innovación.  Te contare un poco de lo que he hecho en los siguientes puntos, gracias por tu interes. `,
-  Motivos: [
-    {
-      Titulo: "Tu Mentor Web",
-      Link: "https://tumentorweb.com.mx", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `Tu mentor Web es mi consultora con la que puedes contactar a mi equipo para la cotización y creación de proyectos digitales.`,
-    },
-    {
-      Titulo: "Tu Encargo",
-      Link: "https://tuencargo.com.mx", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `Este proyecto es una aplicación movil donde ayudabamos al comercio local a crear una pequeña tienda en línea, con la finalidad de que pudiera promocionar sus productos con sus vecinos
-  y aunque la pandemia no los dejaba abrir, ellos pudieran seguir vendiendo.`,
-    },
-    {
-      Titulo: "Detalles Ciberneticos",
-      Link: "", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `Este proyecto era una página web donde los clientes compraban una serie de mini juegos en forma de calabozos que se configuraban con fotos de la pareja o información de la relación donde 
-    experimentaban una detalle único para al final llegar a una carta de amor animada.`,
-    },
-    {
-      Titulo: "Torneos Platino Mexico FIFA",
-      Link: "", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `Este proyecto era una página web donde cree una comunidad de jugadores del juego FIFA, con un ranking y creaba torneos para que la comunidad pudiera competir.`,
-    },
-
-    {
-      Titulo: "Hay Paro",
-      Link: "", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `HayParo es un proyecto que cree hace un par de años con mi socio. El proyecto pretendía tener una comunidad que se ayudará para encontrar mascotas extraviadas, para ayudar a encontrar autos robados o para alertar de las zonas
-      más inseguras de la ciudad, con alertas de estabas y robos, donde los ciudadanos pudieran estar más consientes de las zonas que transita.`,
-    },
-    {
-      Titulo: "Más de 10 años de Experiencia",
-      Link: "", // Si no hay un link para redirigir, DEJALO VACÍO.
-      DescripcionCorta: `Como puedes ver estos han sido mis emprendimientos, he estado en proyectos que empiezan desde 0 o he llegado ha proyectos que necesitan mantenimiento, mejoras o hasta un rediseño. 
-      Así que, contáctame y hablemos del proyecto que tienes en mente.`,
-    },
-  ],
-};
+  <section id="proyectos" class="proyectos fade-in">
+    <h2>📂 Proyectos Destacados</h2>
+    <ul>
+      <li>Manual de Seguridad Industrial</li>
+      <li>Informe de Mejora Continua</li>
+      <li>Dashboard de Control de Calidad en Excel</li>
+      <li>Simulación de Procesos
