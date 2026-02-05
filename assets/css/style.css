@@ -1,6 +1,6 @@
 /* Estilo general */
 body {
-  background: #0c0c0c;   /* fondo oscuro */
+  background: #0c0c0c;
   font-family: Arial, sans-serif;
   color: #f5f5f5;
   margin: 0;
@@ -9,7 +9,7 @@ body {
 
 /* Títulos principales */
 .titulo-principal {
-  color: #ffcc00;        /* dorado */
+  color: #ffcc00;
   text-align: center;
   margin-top: 20px;
 }
@@ -37,20 +37,61 @@ body {
   padding-left: 20px;
 }
 
+/* Información personal */
+.info {
+  color: #f5f5f5;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+/* Experiencia con barras */
+.barra {
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progreso {
+  background: #ffcc00;
+  color: #0c0c0c;
+  padding: 5px;
+  text-align: right;
+}
+
+/* Comentarios */
+.comentario {
+  color: #ccc;
+  font-style: italic;
+  margin: 10px 0;
+  border-left: 3px solid #ffcc00;
+  padding-left: 10px;
+}
+
+/* Enlaces */
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00bfff;
+}
+
 /* Formulario de contacto */
 #contacto-form {
-  background: #1a1a1a;          /* fondo negro */
+  background: #1a1a1a;
   padding: 40px;
   margin: 40px auto;
   border-radius: 10px;
   max-width: 600px;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5); /* sombra dorada */
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 
 #contacto-form h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ffcc00;               /* título dorado */
+  color: #ffcc00;
 }
 
 .form-contacto {
@@ -61,15 +102,15 @@ body {
 .form-contacto label {
   margin: 10px 0 5px;
   font-weight: bold;
-  color: #f5f5f5;               /* texto claro */
+  color: #f5f5f5;
 }
 
 .form-contacto input,
 .form-contacto textarea {
-  background: #0c0c0c;          /* fondo oscuro */
-  color: #f5f5f5;               /* texto claro */
+  background: #0c0c0c;
+  color: #f5f5f5;
   padding: 10px;
-  border: 1px solid #ffcc00;    /* borde dorado */
+  border: 1px solid #ffcc00;
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 1em;
@@ -77,18 +118,18 @@ body {
 
 .form-contacto input::placeholder,
 .form-contacto textarea::placeholder {
-  color: #ccc;                  /* placeholders gris claro */
+  color: #ccc;
 }
 
 .form-contacto input:focus,
 .form-contacto textarea:focus {
-  outline: 2px solid #ffcc00;   /* borde dorado al enfocar */
+  outline: 2px solid #ffcc00;
 }
 
 /* Botón enviar */
 .btn-enviar {
-  background: #ffcc00;          /* dorado */
-  color: #0c0c0c;               /* texto oscuro */
+  background: #ffcc00;
+  color: #0c0c0c;
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -98,6 +139,24 @@ body {
 }
 
 .btn-enviar:hover {
-  background: #00bfff;          /* azul al pasar el mouse */
-  color: #fff;                  /* texto blanco */
+  background: #00bfff;
+  color: #fff;
 }
+
+/* Botón PDF */
+.btn-pdf {
+  background: #ffcc00;
+  color: #0c0c0c;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.btn-pdf:hover {
+  background: #00bfff;
+  color: #fff
