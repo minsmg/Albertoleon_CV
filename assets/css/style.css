@@ -1,24 +1,49 @@
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 40px;
-  background-color: #f4f6f9;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #0c0c0c;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
-.portada {
-  text-align: center;
-  padding: 60px;
-  background: linear-gradient(135deg, #004080, #0066cc);
-  color: white;
-  border-radius: 10px;
+h1, h2 {
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px #000;
 }
 
-.portada h1 { font-size: 2.5em; margin-bottom: 10px; }
-.portada h2 { font-size: 1.5em; margin-bottom: 20px; font-weight: 300; }
-.portada p { font-size: 1.1em; margin: 5px 0; }
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
 
-section {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: white;
+a:hover {
+  color: #ffcc00;
+}
+
+.portada {
+  background: url('imagenes/portada-industrial.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portada h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.2em;
+}
+
+.portada h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.galeria {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.galeria figure
