@@ -1,89 +1,106 @@
-/* Estilos generales */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f6f9;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f6f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Encabezado */
-#encabezado {
-  background: linear-gradient(135deg, #2e7d32, #388e3c);
-  color: #fff;
+.portada {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px;
+  background: linear-gradient(135deg, #004080, #0066cc);
+  color: white;
+  border-radius: 10px;
 }
 
-#encabezado h1 {
-  margin: 0;
-  font-size: 2.8em;
-  font-weight: bold;
-}
+.portada h1 { font-size: 2.5em; margin-bottom: 10px; }
+.portada h2 { font-size: 1.5em; margin-bottom: 20px; font-weight: 300; }
+.portada p { font-size: 1.1em; margin: 5px 0; }
 
-#encabezado h2 {
-  margin: 10px 0;
-  font-weight: normal;
-  font-size: 1.4em;
-}
-
-#encabezado p {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-/* Secciones */
 section {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 25px;
-  background: #fff;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 section h2 {
-  color: #2e7d32;
-  border-bottom: 2px solid #66bb6a;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  font-size: 1.4em;
+  color: #004080;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-/* Listas */
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.btn-descarga {
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-li {
-  margin-bottom: 8px;
-  font-size: 1.05em;
-}
+.btn-descarga:hover { background-color: #0066cc; }
 
-/* Experiencia laboral */
-#experiencia article {
-  margin-bottom: 25px;
+@media print {
+  body { background: white !important; color: black !important; }
+  .btn-descarga, nav { display: none !important; }
+  section { box-shadow: none !important; border: none !important; }
 }
+/* Estilos para impresión en PDF */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    margin: 20mm; /* márgenes estándar para documentos */
+  }
 
-#experiencia h3 {
-  color: #388e3c;
-  margin-bottom: 5px;
-}
+  /* Ocultar elementos que no deben aparecer en el PDF */
+  nav, .btn-descarga {
+    display: none !important;
+  }
 
-#experiencia p {
-  font-style: italic;
-  color: #555;
-  margin-bottom: 10px;
-}
+  /* Ajustar secciones para impresión */
+  section {
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid; /* evita cortes bruscos dentro de secciones */
+  }
 
-/* Footer */
-footer {
-  text-align: center;
-  background: #2e7d32;
-  color: #fff;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9em;
+  /* Portada más sobria en PDF */
+  .portada {
+    background: none !important;
+    color: black !important;
+    padding: 20px;
+    border: none;
+  }
+
+  .portada h1 {
+    font-size: 24pt;
+    font-weight: bold;
+  }
+
+  .portada h2 {
+    font-size: 16pt;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .portada p {
+    font-size: 12pt;
+    margin: 4px 0;
+  }
+
+  /* Ajustar títulos */
+  section h2 {
+    color: black !important;
+    border: none !important;
+    font-size: 14pt;
+    margin-bottom: 10px;
+  }
 }
