@@ -7,11 +7,12 @@ body {
   padding: 0;
 }
 
-/* Títulos principales */
+/* Título principal */
 .titulo-principal {
   color: #ffcc00;
   text-align: center;
   margin-top: 20px;
+  font-size: 2.5em;
 }
 
 /* Descripción del perfil */
@@ -19,15 +20,19 @@ body {
   color: #f5f5f5;
   text-align: center;
   max-width: 800px;
-  margin: auto;
+  margin: 20px auto;
   line-height: 1.6;
+  font-size: 1.2em;
 }
 
 /* Títulos de secciones */
 .titulo-seccion {
   color: #ffcc00;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
 }
 
 /* Listas */
@@ -35,6 +40,7 @@ body {
   color: #f5f5f5;
   list-style-type: square;
   padding-left: 20px;
+  line-height: 1.6;
 }
 
 /* Información personal */
@@ -45,11 +51,15 @@ body {
 }
 
 /* Experiencia con barras */
+.experiencia-item {
+  margin-bottom: 15px;
+}
+
 .barra {
   background: #333;
   border-radius: 5px;
   overflow: hidden;
-  margin: 10px 0;
+  margin-top: 5px;
 }
 
 .progreso {
@@ -57,13 +67,14 @@ body {
   color: #0c0c0c;
   padding: 5px;
   text-align: right;
+  font-weight: bold;
 }
 
-/* Comentarios */
+/* Comentarios / Testimonios */
 .comentario {
   color: #ccc;
   font-style: italic;
-  margin: 10px 0;
+  margin: 15px 0;
   border-left: 3px solid #ffcc00;
   padding-left: 10px;
 }
@@ -72,6 +83,7 @@ body {
 a {
   color: #ffcc00;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
@@ -159,3 +171,5 @@ a:hover {
 
 .btn-pdf:hover {
   background: #00bfff;
+  color: #fff;
+}
