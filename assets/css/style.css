@@ -1,16 +1,56 @@
+/* Estilo general */
+body {
+  background: #0c0c0c;   /* fondo oscuro */
+  font-family: Arial, sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos principales */
+.titulo-principal {
+  color: #ffcc00;        /* dorado */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Descripción del perfil */
+.descripcion {
+  color: #f5f5f5;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Títulos de secciones */
+.titulo-seccion {
+  color: #ffcc00;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Listas */
+.lista {
+  color: #f5f5f5;
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Formulario de contacto */
 #contacto-form {
-  background: #1a1a1a;
+  background: #1a1a1a;          /* fondo negro */
   padding: 40px;
   margin: 40px auto;
   border-radius: 10px;
   max-width: 600px;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5); /* sombra dorada */
 }
 
 #contacto-form h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ffcc00;
+  color: #ffcc00;               /* título dorado */
 }
 
 .form-contacto {
@@ -21,26 +61,34 @@
 .form-contacto label {
   margin: 10px 0 5px;
   font-weight: bold;
-  color: #f5f5f5;
+  color: #f5f5f5;               /* texto claro */
 }
 
 .form-contacto input,
 .form-contacto textarea {
+  background: #0c0c0c;          /* fondo oscuro */
+  color: #f5f5f5;               /* texto claro */
   padding: 10px;
-  border: none;
+  border: 1px solid #ffcc00;    /* borde dorado */
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 1em;
 }
 
-.form-contacto input:focus,
-.form-contacto textarea:focus {
-  outline: 2px solid #ffcc00;
+.form-contacto input::placeholder,
+.form-contacto textarea::placeholder {
+  color: #ccc;                  /* placeholders gris claro */
 }
 
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: 2px solid #ffcc00;   /* borde dorado al enfocar */
+}
+
+/* Botón enviar */
 .btn-enviar {
-  background: #ffcc00;
-  color: #0c0c0c;
+  background: #ffcc00;          /* dorado */
+  color: #0c0c0c;               /* texto oscuro */
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -50,7 +98,6 @@
 }
 
 .btn-enviar:hover {
-  background: #00bfff;
-  color: #fff;
+  background: #00bfff;          /* azul al pasar el mouse */
+  color: #fff;                  /* texto blanco */
 }
-
