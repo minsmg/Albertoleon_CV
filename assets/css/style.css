@@ -156,20 +156,4 @@ a:hover {
 }
 
 /* Botón PDF */
-.btn-pdf {
-  background: #ffcc00;
-  color: #0c0c0c;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
-  transition: background 0.3s ease;
-}
-
-.btn-pdf:hover {
-  background: #00bfff;
-  color: #fff;
-}
+.btn-pdf
