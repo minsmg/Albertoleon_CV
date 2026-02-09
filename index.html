@@ -15,12 +15,14 @@
       line-height: 1.6;
     }
 
+    /* Encabezado */
     header {
       background: linear-gradient(135deg, #1f3c88, #3a6ea5);
       color: white;
-      padding: 40px 20px;
+      padding: 40px 20px 80px;
       text-align: center;
       box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      position: relative;
     }
 
     header h1 {
@@ -35,12 +37,33 @@
       opacity: 0.9;
     }
 
+    /* Menú superior */
+    nav {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    /* Secciones */
     section {
       background: white;
       margin: 20px auto;
       padding: 25px;
       width: 90%;
-      max-width: 800px;
+      max-width: 900px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.2s ease;
@@ -105,11 +128,18 @@
 <header>
   <h1>Alberto Enrique León Soto</h1>
   <p>Especialista en Operaciones Industriales y Transformación Digital</p>
+  <nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#educacion">Educación</a>
+    <a href="#certificaciones">Certificaciones</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <section id="perfil">
   <h2>Perfil Profesional</h2>
-  <p>Ingeniero en Petróleo y Técnico Superior en Petróleo, formado en la Universidad del Zulia (Venezuela). Profesional con experiencia en operaciones industriales, gestión de riesgos y seguridad, con una evolución destacada desde la microgestión hacia la gestión laboral efectiva mediante la aplicación de instrucciones claras, específicas y precisas. Este avance consolidó mi capacidad para liderar equipos, estructurar procesos y garantizar resultados consistentes en entornos operativos exigentes.</p>
+  <p>Ingeniero en Petróleo y Técnico Superior en Producción Industrial, formado en la Universidad del Zulia (Venezuela). Profesional con experiencia en operaciones industriales, gestión de riesgos y seguridad, con una evolución destacada desde la microgestión hacia la gestión laboral efectiva mediante la aplicación de instrucciones claras, específicas y precisas. Este avance consolidó mi capacidad para liderar equipos, estructurar procesos y garantizar resultados consistentes en entornos operativos exigentes.</p>
   <p>Actualmente enfocado en la transformación digital, la optimización de procesos y la gestión estratégica de portafolios, integrando competencias técnicas y digitales para mejorar la eficiencia, la trazabilidad y la toma de decisiones en organizaciones modernas.</p>
 </section>
 
@@ -127,7 +157,7 @@
   <ul>
     <li>Ingeniería en Petróleo – Universidad del Zulia (Venezuela)</li>
     <p><em>Nota: Se cuenta con copia del diploma y notas oficiales. El título original permanece en la universidad y aún no ha sido legalizado, apostillado ni revalidado en Colombia.</em></p>
-    <li>Técnico Superior en Petróleo – Universidad del Zulia (Venezuela)</li>
+    <li>Técnico Superior en Producción Industrial – Universidad del Zulia (Venezuela)</li>
     <li>Certificaciones digitales verificables en plataformas internacionales</li>
   </ul>
 </section>
@@ -166,5 +196,3 @@
 </body>
 </html>
 <!-- FIN DEL DOCUMENTO -->
-
-
