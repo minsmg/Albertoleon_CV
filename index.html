@@ -15,7 +15,6 @@
       line-height: 1.6;
     }
 
-    /* Encabezado */
     header {
       background: linear-gradient(135deg, #1f3c88, #3a6ea5);
       color: white;
@@ -37,7 +36,6 @@
       opacity: 0.9;
     }
 
-    /* Menú superior */
     nav {
       position: absolute;
       bottom: 10px;
@@ -57,7 +55,6 @@
       color: #ffdd57;
     }
 
-    /* Secciones */
     section {
       background: white;
       margin: 20px auto;
@@ -94,7 +91,7 @@
       border-bottom: none;
     }
 
-    .contact-buttons a {
+    .contact-buttons a, .action-buttons button {
       display: inline-block;
       margin: 8px 5px;
       padding: 10px 18px;
@@ -104,9 +101,11 @@
       border-radius: 6px;
       font-size: 0.95rem;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
     }
 
-    .contact-buttons a:hover {
+    .contact-buttons a:hover, .action-buttons button:hover {
       background-color: #1f3c88;
       transform: translateY(-2px);
     }
@@ -187,11 +186,28 @@
     <a href="https://www.linkedin.com/in/alberto-leon-10a685261" target="_blank">🔗 LinkedIn</a>
     <a href="https://github.com/minsmg/Albertoleon_CV" target="_blank">💻 GitHub</a>
   </div>
+
+  <div class="action-buttons">
+    <button onclick="window.print()">🖨️ Imprimir CV</button>
+    <button onclick="downloadCV()">⬇️ Descargar CV</button>
+  </div>
 </section>
 
 <footer>
   © 2026 Alberto Enrique León Soto — CV Digital. Todos los derechos reservados.
 </footer>
+
+<script>
+  function downloadCV() {
+    const element = document.createElement('a');
+    const file = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
+    element.href = URL.createObjectURL(file);
+    element.download = "CV_Alberto_Leon.html";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+</script>
 
 </body>
 </html>
