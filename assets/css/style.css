@@ -1,169 +1,90 @@
-/* Estilo general */
+/* style.css */
+
+/* Tipografía y colores base */
 body {
-  background: #0c0c0c;
-  font-family: Arial, sans-serif;
-  color: #f5f5f5;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* Título principal */
-.titulo-principal {
-  color: #ffcc00;
+/* Encabezado */
+header {
+  background-color: #004080;
+  color: #fff;
   text-align: center;
-  margin-top: 20px;
-  font-size: 2.5em;
+  padding: 2rem 1rem;
 }
 
-/* Descripción */
-.descripcion {
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  line-height: 1.6;
-  font-size: 1.2em;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-/* Títulos de secciones */
-.titulo-seccion {
-  color: #ffcc00;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-size: 1.8em;
-  border-bottom: 2px solid #ffcc00;
-  padding-bottom: 5px;
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+/* Secciones */
+section {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #004080;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  color: #0066cc;
+  margin-top: 1.5rem;
 }
 
 /* Listas */
-.lista {
-  list-style-type: square;
-  padding-left: 20px;
-  line-height: 1.6;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Información personal */
-.info {
-  font-size: 1.1em;
-  margin: 5px 0;
+ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
 }
 
-/* Experiencia con barras */
-.experiencia-item {
-  margin-bottom: 15px;
+ul li::before {
+  content: "•";
+  color: #004080;
+  position: absolute;
+  left: 0;
 }
 
-.barra {
-  background: #333;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 5px;
-}
-
-.progreso {
-  background: #ffcc00;
-  color: #0c0c0c;
-  padding: 5px;
-  text-align: right;
+/* Certificación verificada */
+.certificado {
+  color: green;
   font-weight: bold;
+  margin-left: 0.5rem;
 }
 
-/* Comentarios */
-.comentario {
-  color: #ccc;
-  font-style: italic;
-  margin: 15px 0;
-  border-left: 3px solid #ffcc00;
-  padding-left: 10px;
-}
-
-/* Enlaces */
-a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #00bfff;
-}
-
-/* Formulario de contacto */
-#contacto-form {
-  background: #1a1a1a;
-  padding: 40px;
-  margin: 40px auto;
-  border-radius: 10px;
-  max-width: 600px;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
-}
-
-#contacto-form h2 {
+/* Footer */
+footer {
   text-align: center;
-  margin-bottom: 20px;
-  color: #ffcc00;
-}
-
-.form-contacto {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-contacto label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  background: #0c0c0c;
-  color: #f5f5f5;
-  padding: 10px;
-  border: 1px solid #ffcc00;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  font-size: 1em;
-}
-
-.form-contacto input::placeholder,
-.form-contacto textarea::placeholder {
-  color: #ccc;
-}
-
-.form-contacto input:focus,
-.form-contacto textarea:focus {
-  outline: 2px solid #ffcc00;
-}
-
-/* Botón enviar */
-.btn-enviar {
-  background: #ffcc00;
-  color: #0c0c0c;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-enviar:hover {
-  background: #00bfff;
+  padding: 1rem;
+  background-color: #004080;
   color: #fff;
+  margin-top: 2rem;
 }
 
-/* Botón PDF */
-.btn-pdf {
-  background: #ffcc00;
-  color: #0c0c0c;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
-  transition: background 0.3s ease;
-}
 
-.btn-pdf:hover {
-  background: #
+
+
