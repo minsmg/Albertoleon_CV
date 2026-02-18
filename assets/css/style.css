@@ -72,3 +72,48 @@ header p {
   color: #333;
 }
 
+/* Estilo para la sección SOITSHA */
+#soitsha {
+  text-align: center;              /* Centra todo el contenido */
+  background: #f9f9f9;             /* Fondo suave */
+  padding: 30px;                   /* Espaciado interno */
+  margin: 40px auto;               /* Espaciado externo */
+  border-radius: 12px;             /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra ligera */
+  max-width: 600px;                /* Ancho máximo */
+}
+
+#soitsha h2 {
+  color: #0078D7;                  /* Azul corporativo */
+  margin-bottom: 15px;
+}
+
+#soitsha p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#soitsha img {
+  transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+#soitsha img:hover {
+  transform: scale(1.05);          /* Efecto zoom suave */
+}
+
+#soitsha a.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0078D7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+#soitsha a.button:hover {
+  background: #005a9e;             /* Azul más oscuro al pasar el mouse */
+}
