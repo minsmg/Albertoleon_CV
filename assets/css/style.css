@@ -207,3 +207,39 @@ header p {
 #disasterready a.button:hover {
   background: #1e7e34;
 }
+<head>
+  <meta charset="UTF-8">
+  <title>Currículum Digital - Alberto León</title>
+  <style>
+    /* Aquí pegas el CSS diferenciado por plataformas */
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 6px 12px;
+      display: inline-block;
+      margin: 4px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Skillshop: Azul */
+    #skillshop a { background-color: #0056b3; color: #fff; }
+    #skillshop a:hover { background-color: #003366; }
+
+    /* Politécnico: Verde */
+    #politecnico a { background-color: #228B22; color: #fff; }
+    #politecnico a:hover { background-color: #006400; }
+
+    /* Google Actívate: Rojo */
+    #activate a { background-color: #B22222; color: #fff; }
+    #activate a:hover { background-color: #800000; }
+
+    /* Soitsha: Naranja */
+    #soitsha a { background-color: #FF8C00; color: #fff; }
+    #soitsha a:hover { background-color: #FF4500; }
+
+    /* DisasterReady: Morado */
+    #disasterready a { background-color: #6A0DAD; color: #fff; }
+    #disasterready a:hover { background-color: #4B0082; }
+  </style>
+</head>
