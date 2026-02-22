@@ -414,3 +414,123 @@ a:visited {
 #disasterready ul li a:hover {
   background-color: #4B0082;
 }
+/* Estilo base para todos los enlaces */
+a,
+a:visited,
+a:link {
+  text-decoration: underline; /* Subrayado uniforme */
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Skillshop: Azul */
+#skillshop ul li a {
+  background-color: #0056b3;
+  color: #fff !important;
+}
+#skillshop ul li a:hover {
+  background-color: #003366;
+}
+
+/* Politécnico: Verde */
+#politecnico ul li a {
+  background-color: #228B22;
+  color: #fff !important;
+}
+#politecnico ul li a:hover {
+  background-color: #006400;
+}
+
+/* Google Actívate: Rojo */
+#activate ul li a {
+  background-color: #B22222;
+  color: #fff !important;
+}
+#activate ul li a:hover {
+  background-color: #800000;
+}
+
+/* Soitsha: Naranja */
+#soitsha ul li a {
+  background-color: #FF8C00;
+  color: #fff !important;
+}
+#soitsha ul li a:hover {
+  background-color: #FF4500;
+}
+
+/* DisasterReady: Morado */
+#disasterready ul li a {
+  background-color: #6A0DAD;
+  color: #fff !important;
+}
+#disasterready ul li a:hover {
+  background-color: #4B0082;
+}
+/* Estilo base para todos los enlaces en cualquier estado */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: underline; /* Subrayado uniforme */
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Skillshop: Azul */
+#skillshop ul li a:link,
+#skillshop ul li a:visited {
+  background-color: #0056b3;
+  color: #fff !important;
+}
+#skillshop ul li a:hover {
+  background-color: #003366;
+}
+
+/* Politécnico: Verde */
+#politecnico ul li a:link,
+#politecnico ul li a:visited {
+  background-color: #228B22;
+  color: #fff !important;
+}
+#politecnico ul li a:hover {
+  background-color: #006400;
+}
+
+/* Google Actívate: Rojo */
+#activate ul li a:link,
+#activate ul li a:visited {
+  background-color: #B22222;
+  color: #fff !important;
+}
+#activate ul li a:hover {
+  background-color: #800000;
+}
+
+/* Soitsha: Naranja */
+#soitsha ul li a:link,
+#soitsha ul li a:visited {
+  background-color: #FF8C00;
+  color: #fff !important;
+}
+#soitsha ul li a:hover {
+  background-color: #FF4500;
+}
+
+/* DisasterReady: Morado */
+#disasterready ul li a:link,
+#disasterready ul li a:visited {
+  background-color: #6A0DAD;
+  color: #fff !important;
+}
+#disasterready ul li a:hover {
+  background-color: #4B0082;
+}
