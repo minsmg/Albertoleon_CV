@@ -1,0 +1,20 @@
+# CHANGELOG
+
+## [Unreleased]
+- Pendientes futuras integraciones de certificaciones y mejoras visuales.
+
+## [2026-03-01] Perfil Profesional
+- **Perfil Profesional actualizado con certificaciones en IA y Google Ads.**
+- Sección integrada en `index.html` bajo `<section id="perfil">`.
+- Commit de integración: `HASH_DEL_COMMIT`  <!-- reemplaza con el hash real del commit en GitHub -->
+
+## [2026-03-01] Estilos CSS
+- **Bloque CSS agregado para destacar Perfil Profesional.**
+- Fondo degradado azul-blanco, tipografía diferenciada, sombra ligera y bordes redondeados.
+- Integrado en `assets/css/style.css` al final del archivo.
+- Commit de integración: `HASH_DEL_COMMIT`  <!-- reemplaza con el hash real del commit en GitHub -->
+
+## [2026-02-28] Certificaciones Skillshop
+- **Google Ads Measurement y IA** integradas en sección Skillshop.
+- Enlaces verificados y públicos (`target="_blank`).
+- Commit de integración: `HASH_DEL_COMMIT`  <!-- reemplaza con el hash real del commit en GitHub -->
