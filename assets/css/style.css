@@ -534,3 +534,49 @@ a:active {
 #disasterready ul li a:hover {
   background-color: #4B0082;
 }
+/* Estilo destacado para el perfil profesional */
+#perfil {
+  background-color: #f9f9f9;       /* Fondo suave */
+  border-left: 5px solid #007acc;  /* Línea lateral azul profesional */
+  padding: 20px;
+  margin: 20px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+#perfil h2 {
+  color: #007acc;                  /* Azul corporativo */
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+#perfil p {
+  margin: 0;
+}
+/* Estilo destacado con fondo degradado para el perfil profesional */
+#perfil {
+  background: linear-gradient(135deg, #e6f2ff, #ffffff); /* Degradado azul claro a blanco */
+  border-left: 5px solid #007acc;  /* Línea lateral azul corporativo */
+  padding: 20px;
+  margin: 20px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra más marcada */
+  border-radius: 6px; /* Bordes suavemente redondeados */
+}
+
+#perfil h2 {
+  color: #005b99;                  /* Azul más intenso para el título */
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#perfil p {
+  margin: 0;
+}
