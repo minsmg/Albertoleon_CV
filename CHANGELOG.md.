@@ -18,3 +18,16 @@
 - **Google Ads Measurement y IA** integradas en sección Skillshop.
 - Enlaces verificados y públicos (`target="_blank`).
 - Commit de integración: `HASH_DEL_COMMIT`  <!-- reemplaza con el hash real del commit en GitHub -->
+## [2026-03-14] – Integración de Certificado Cloud Computing
+
+### Añadido
+- Se incorporó el curso **Cloud Computing – Skillshop (EOI, Google Actívate)** en la sección *Formación y Certificaciones – Skillshop* del CV digital.
+- Enlace directo al certificado verificable:  
+  [Cloud Computing – Skillshop](https://skillshop.exceedlms.com/student/collection/786255-cloud-computing?sid=d4612fdf-ffbb-43a2-a586-842264b47a03&sid_i=3)
+
+### Confirmación
+- Visualización correcta en GitHub Pages.  
+- Estructura y estilo uniformes con el resto de certificaciones.  
+- Enlace abre en nueva pestaña (`target="_blank`).  
+
+### Commit sugerido
