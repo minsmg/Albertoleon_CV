@@ -41,5 +41,13 @@
 ### Confirmación
 - Visualización correcta en GitHub Pages.  
 - Consistencia en el uso de “Ver certificado” en todos los títulos y diplomados con respaldo documental.  
+## [2026-03-16] – Corrección del enlace de Técnico Superior
+
+### Modificado
+- Se corrigió el enlace del **Técnico Superior Universitario en Producción Industrial – Instituto Universitario Juan Pablo Pérez Alfonzo**.
+- Ahora apunta a la ruta pública de GitHub Pages en el repositorio `Albertoleon_CV`.
+- Se mantuvieron todos los demás enlaces originales (Licenciatura, Técnico Medio y Diplomados del Politécnico Superior).
+
+### Commit sugerido
 
 ### Commit sugerido
