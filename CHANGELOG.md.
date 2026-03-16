@@ -31,3 +31,15 @@
 - Enlace abre en nueva pestaña (`target="_blank`).  
 
 ### Commit sugerido
+## [2026-03-15] – Integración de Diplomados del Politécnico Superior
+
+### Añadido
+- Se integró el enlace verificable del **Diplomado en Liderazgo – Politécnico Superior**.
+- Se integró el enlace verificable del **Diplomado en Desarrollo de Habilidades para la Gerencia – Politécnico Superior**.
+- Se mantuvieron todos los enlaces originales de los demás títulos.
+
+### Confirmación
+- Visualización correcta en GitHub Pages.  
+- Consistencia en el uso de “Ver certificado” en todos los títulos y diplomados con respaldo documental.  
+
+### Commit sugerido
